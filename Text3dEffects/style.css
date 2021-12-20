@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ff5e5e;
+}
+.container{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+}
+h1{
+    margin:0;
+    padding:20px 0;
+    text-align: center;
+    font-size: 5em;
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+h1:hover{
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 1px 0 #ccc, 0 12px 15px rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
+}
