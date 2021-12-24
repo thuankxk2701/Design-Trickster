@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding:0;
+}
+.topbar{
+    width: 100%;
+    height: 100px;
+    background-color:#262626 ;
+    transition: all 0.5s;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
