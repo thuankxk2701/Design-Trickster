@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #011029;
+    
+}
+.box{
+    width: 800px;
+    margin: 40px auto 0;
+    padding: 40px;
+    background-color: #052152;
+    box-sizing: border-box;
+}
+.box ul{
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #020c1d;
+
+}
+.box ul li{
+    
+    list-style: none;
+    
+}
+.box ul li .item{
+    position: relative;
+    padding: 30px 20px;
+ transition: all 0.4s;
+}
+.box ul li .item:hover{
+    background-color: #041940;
+
+}
+.box ul li .item::before{
+    content: "";
+    position: absolute;
+    top:32px;
+    left: -7px;
+    width: 12px;
+      height: 12px;
+    border-radius: 50%;
+    background-color: #021434;
+    box-shadow: inset 0 0 10px rgba(0,0,0,1);
+
+    
+}
+.box ul li .item::after{
+    content: "";
+    position: absolute;
+    top:32px;
+    left: -7px;
+    width: 12px;
+      height: 12px;
+    border-radius: 50%;
+    background-color: #ff0;
+    box-shadow: inset 0 0 10px rgba(255,255,0,1);
+   opacity: 0;
+
+    
+}
+.box ul li .item:hover::after{
+ 
+   animation: animate 0.5s linear infinite;
+  
+
+    
+}
+.box ul li .item span{
+   padding: 4px 12px;
+   background-color: #007faf;
+   border-radius: 15px;
+   color: #fff;
+
+}
+.box ul li .item:hover span{
+   background-color: #e91e63;
+ }
+ .box ul li .item h3{
+     margin: 10px 0 0;
+     padding: 0;
+     color: #007faf;
+
+     
+ }
+ .box ul li .item:hover h3{
+     color: #ff0;
+ }
+
+ .box ul li .item  p{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    
+ }
+
+ @keyframes animate {
+     0%{
+         opacity: 0;
+     }
+
+     50%{
+         opacity: 1;
+     }
+     100%{
+         opacity: 0;
+     }
+ }
