@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Scroll To Top Button</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<body>
+    <section></section>
+    <section>
+        Aorem ipsum dolor sit amet consectetur adipisicing elit. Esse nam inventore
+        <br> id corporis soluta et labore dolorem. Possimus beatae deserunt voluptas dolorem, dolores fuga sit voluptatum! Vitae assumenda error quibusdam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolorem. Natus hic, sequi quidem in, praesentium, reprehenderit architecto voluptatem voluptates magni accusantium veritatis unde asperiores dolorum ea quisquam cum alias.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut nihil nisi fugit atque ad vitae earum enim, tempora, ut sit ex obcaecati iure est aperiam maiores consequatur iste, vero suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, unde aperiam. Quam nulla consequatur ut atque omnis magni tempora vero, libero qui modi eum saepe deleniti consectetur, sed repudiandae at?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum cum, reprehenderit sit aspernatur molestiae aliquid porro vero nesciunt laudantium quas error, repellat qui ipsum non velit hic molestias libero soluta 
+        <br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis perspiciatis iure perferendis suscipit, iusto quas tenetur unde quia molestiae officia beatae optio explicabo, doloremque et incidunt neque atque ipsum! Illum.l
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum placeat distinctio, aliquid beatae, cumque earum nihil voluptatum labore esse quasi, magnam quas! Ab dolores ratione id fuga est culpa consequatur!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nobis, aperiam deleniti, suscipit sunt quia laboriosam, molestiae officiis dolor voluptate exercitationem cumque laborum magnam magni nulla voluptas quaerat esse minus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut eveniet aperiam non inventore ab error autem, dolor vel repellat delectus, expedita debitis? Aliquam voluptas amet deleniti, distinctio dolore assumenda.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque adipisci vero quidem autem, consequuntur commodi vitae id eum consectetur voluptatem facilis. Necessitatibus fugit dolorum libero a reiciendis asperiores repellendus voluptatem.
+    </section>
+    <section></section>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()>200){
+                    $('.scrollToTop').fadeIn()
+                }else{
+                    $('.scrollToTop').fadeOut()
+                }
+            })
+            $('.scrollToTop').click(function(){
+                $('html,body').animate({scrollTop:0},1000)
+            })
+        })
+    </script>
+ 
+</body>
+</html>
