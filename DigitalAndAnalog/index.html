@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="clock">
+      <div class="digital" style="--clr: #ff2972">
+        <div class="screen" data-text="Hours">
+          <div class="time">
+            <div id="hour"></div>
+          </div>
+        </div>
+      </div>
+      <div class="digital" style="--clr: #fee800">
+        <div class="screen" data-text="Minutes">
+          <div class="time">
+            <div id="minutes"></div>
+          </div>
+        </div>
+      </div>
+      <div class="digital" style="--clr: #04fc43">
+        <div class="screen" data-text="Seconds">
+          <div class="time">
+            <div id="seconds"></div>
+          </div>
+        </div>
+      </div>
+      <div class="digital">
+        <div class="box" id="hr" style="--clr: #ff2972"></div>
+        <div class="box" id="mn" style="--clr: #fee800"></div>
+        <div class="box" id="sc" style="--clr: #04fc43"></div>
+        <div id="ampm"></div>
+      </div>
+    </div>
+    <script>
+      let hours = document.getElementById("hour");
+      let minute = document.getElementById("minutes");
+      let second = document.getElementById("seconds");
+      let ampm = document.getElementById("ampm");
+
+      let hr = document.querySelector("#hr");
+      let mm = document.querySelector("#mm");
+      let sc = document.querySelector("#sc");
+
+      setInterval(() => {
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+
+        var am = h >= 12 ? "PM" : "AM";
+
+        // Convert 24hrs clock to 12hours clock
+        if (h > 12) {
+          h = h - 12;
+        }
+
+        hours.innerHTML = String(h).padStart(2, "0");
+        minute.innerHTML = String(m).padStart(2, "0");
+        second.innerHTML = String(s).padStart(2, "0");
+        ampm.innerHTML = am;
+
+        hr.style.transform = `rotateZ(${h * 30}deg)`;
+        mn.style.transform = `rotateZ(${m * 6}deg)`;
+        sc.style.transform = `rotateZ(${s * 6}deg)`;
+      }, 1000);
+    </script>
+  </body>
+</html>
